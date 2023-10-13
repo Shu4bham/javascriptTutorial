@@ -844,26 +844,112 @@ jo nya object bnta hai wo empty hota hai but uske paas paased object ki sari pro
 
 /*now ham last se last function me naye object ko Object.create ki help se bna skte hai or userMethods ko as a proto use krenge */
 
-const userMethods = {
-    about(){
-        return `${this.firstName} is ${this.age} years old.`;
-    },
-    is18 : function(){
-        return this.age >= 18;
-    }
-}
-function createUser(firstName, lastName, email, age, address){
-    const user = Object.create(userMethods);
-    user.firstName = firstName;
-    user.lastName = lastName;
-    user.email = email;
-    user.age = age;
-    user.address = address;
-    return user;
-}
-const user1 = createUser('harshit', 'vashsith', 'harshit@gmail.com', 9, "my address");
-const user2 = createUser('harsh', 'vashsith', 'harshit@gmail.com', 19, "my address");
-const user3 = createUser('mohit', 'vashsitha', 'harshit@gmail.com', 17, "my address");
-console.log(user1.about());
-console.log(user2.about());
-console.log(user3.is18());
+// const userMethods = {
+//     about(){
+//         return `${this.firstName} is ${this.age} years old.`;
+//     },
+//     is18 : function(){
+//         return this.age >= 18;
+//     }
+// }
+// function createUser(firstName, lastName, email, age, address){
+//     const user = Object.create(userMethods);
+//     user.firstName = firstName;
+//     user.lastName = lastName;
+//     user.email = email;
+//     user.age = age;
+//     user.address = address;
+//     return user;
+// }
+// const user1 = createUser('harshit', 'vashsith', 'harshit@gmail.com', 9, "my address");
+// const user2 = createUser('harsh', 'vashsith', 'harshit@gmail.com', 19, "my address");
+// const user3 = createUser('mohit', 'vashsitha', 'harshit@gmail.com', 17, "my address");
+// console.log(user1.about());
+// console.log(user2.about());
+// console.log(user3.is18());
+
+
+
+
+
+// /*Adding Properties to function
+// javascript function ko as a function bhi treat kr skte hai 
+// and as a object bhi.
+// we can add our own Properties to a function
+// */
+// function hello() {
+//     console.log("Hello World");
+// }
+// // name property already defined hai
+// console.log(hello.name);
+// hello.myOwnProperty = "this is added to object of function hello";
+// console.log(hello.myOwnProperty);
+
+
+
+
+/*Prototype*/
+/*Note ✅ 
+__proto__   -> ek reference hai uska jo bhi hum chain create krna chahte hai
+prototype -> simple ek object hai jisme hum key values pair add kr skte hai
+*/
+/*Functions ke sath ek empty object milta hai jisme hum Functions se related key value pair add kr skte hai
+only functions has prototype property 
+prototype me hum functions bhi add kr skte hai*/
+/*key values prototype me add kro na ki direct 
+hello.prototype.key1 = "value1";
+ex :- hello.prototype.key1 = "value1";✅
+not like this :- hello.myOwnProperty = "hello";👎
+ */
+// function hello() {
+//     console.log("Hello World");
+// }
+// hello.prototype.key1 = "value1";
+// hello.prototype.sing = function () {
+//     return "Hello World!";
+// }
+// console.log(hello.prototype.sing());
+
+
+
+/*Functions to create objects*/
+/*createUser me alg se methods ke liye functions bnane se acha createUser ke prototype me wo functions add kr do
+isme bas Object.create me createUser.prototype add krdenge kyunki us objects me saare methods honge */
+
+// function createUser(firstName, lastName, email, age, address){
+//     const user = Object.create(createUser.prototype);
+//     user.firstName = firstName;
+//     user.lastName = lastName;
+//     user.email = email;
+//     user.age = age;
+//     user.address = address;
+//     return user;
+// }
+
+// createUser.prototype.about = function(){
+//     return `${this.firstName} is ${this.age} years old!`;
+// }
+// createUser.prototype.is18 = function(){
+//     return this.age>=18;
+// }
+
+// const user1 = createUser('harshit', 'vashsith', 'harshit@gmail.com', 29, "my address");
+// const user2 = createUser('harsh', 'vashsith', 'harshit@gmail.com', 19, "my address");
+// const user3 = createUser('mohit', 'vashsitha', 'harshit@gmail.com', 17, "my address");
+
+// console.log(user1.about());
+// console.log(user1.is18());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
