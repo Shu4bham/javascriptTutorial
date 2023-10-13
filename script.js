@@ -687,30 +687,52 @@
 // myfunc2();/*myfunc2 me myFunc function store ho gya, ab myFunc2 ko run krenge to myFunc waala kaam hoga */
 
 
+// const user1 = {
+//     fName:"harshit",
+//     age : 23,
+//     about(favMusician,hobby){
+//         console.log(`Name is ${this.fName} and age is ${this.age}, favmusician = ${favMusician}, hobby = ${hobby}`);
+//     }
+// };
+// const user2 = {
+//     fName:"shubham",
+//     age : 20
+// };
+
+// // user1.about("honey singh","sleeping");
+// // const details = user1.about;
+// // console.log(user1.about);/*both details and user1.about have same function */
+// // console.log(details);
+// // details("honey singh","sleeping");/*yaha fName and age ki values undefined aayengi kyunki hmne function ko assign to kia but user1 ke sath bind nhi kia, Although about and details have same function content but they will not produce same output */
+
+// /*name or age ki output undefined na aaye iske liye hme function ko user1 ke sath bind krna hoga */
+// const details2 = user1.about.bind(user2/*ye this ko paas kia hai */);
+// details2("honey singh","sleeping");
+
+
+
+
+
+
+// arrow function and this
+/*arrow function ka this nhi hota iska this ek level up hota hai, arrow function ke this ko hum change nhi kr skte */
+
+const about = (favMusician,hobby)=>{
+    console.log(`Name is ${this.fName} and age is ${this.age}, favmusician = ${favMusician}, hobby = ${hobby}`);
+}
+
 const user1 = {
     fName:"harshit",
     age : 23,
-    about(favMusician,hobby){
+    about: (favMusician,hobby)=>{
         console.log(`Name is ${this.fName} and age is ${this.age}, favmusician = ${favMusician}, hobby = ${hobby}`);
     }
 };
-const user2 = {
-    fName:"shubham",
-    age : 20
-};
-
-// user1.about("honey singh","sleeping");
-// const details = user1.about;
-// console.log(user1.about);/*both details and user1.about have same function */
-// console.log(details);
-// details("honey singh","sleeping");/*yaha fName and age ki values undefined aayengi kyunki hmne function ko assign to kia but user1 ke sath bind nhi kia, Although about and details have same function content but they will not produce same output */
-
-/*name or age ki output undefined na aaye iske liye hme function ko user1 ke sath bind krna hoga */
-const details2 = user1.about.bind(user2/*ye this ko paas kia hai */);
-details2("honey singh","sleeping");
+// user1.about("honey singh","sleeping");/*although hmne user1 ke sath this ko call kia hai but ye name or age undefined dega */
+// user1.about.call(user1,"honey singh","sleeping")/*we cannot change this of arrow function */
 
 
-
+// about.call(user1,"honey singh","sleeping");/*same undefined output if we make function outside the object */
 
 
 
