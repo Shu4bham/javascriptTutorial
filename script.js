@@ -1064,30 +1064,135 @@ CreateUser.prototype = {
 
 
 //function overriding in javascript 
-class Animal{
-    constructor(name,age){
-        this.name = name;
+// class Animal{
+//     constructor(name,age){
+//         this.name = name;
+//         this.age = age;
+//     }
+//     eat(){
+//         return `${this.name} is eating!`;
+//     }
+//     isCute(){
+//         return true;
+//     }
+// }
+// class Dog extends Animal{
+//     constructor(name,age,speed){
+//         super(name,age);
+//         this.speed = speed;
+//     }
+//     eat(){
+//         return `Modified eat : ${this.name} is eating!`;
+//     }
+//     run(){
+//         return `${this.name} is running at ${this.speed}`;
+//     }
+// }
+// const tommy = new Dog("tommy",4,32);
+// console.log(tommy.eat())
+// console.log(tommy.run());
+
+
+
+
+// getter and setters 
+
+/*use get keyword for getters
+and
+set keyword for setters */
+class Person{
+    constructor(firstName, lastName, age){
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.age = age;
     }
-    eat(){
-        return `${this.name} is eating!`;
+    get fullName(){
+        return `${this.firstName} ${this.lastName}`
     }
-    isCute(){
-        return true;
-    }
-}
-class Dog extends Animal{
-    constructor(name,age,speed){
-        super(name,age);
-        this.speed = speed;
-    }
-    eat(){
-        return `Modified eat : ${this.name} is eating!`;
-    }
-    run(){
-        return `${this.name} is running at ${this.speed}`;
+    /*fullName ko as a property (jaise key hoti hai) use krskte hai    */
+    set fullName(fullName){
+        const [firstName, lastName] = fullName.split(" ");/*space aaya jaha pe uske hisab se alag alag krna */
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
 }
-const tommy = new Dog("tommy",4,32);
-console.log(tommy.eat())
-console.log(tommy.run());
+
+
+const person1 = new Person("harshit", "sharma", 5);
+// console.log(person1.fullName());
+console.log(person1.fullName);/*isme fullname ek function hai but usko as a key use kr rahe hai */
+person1.fullName = "mohit vashistha";/*this is setter */
+// console.log(person1);
+console.log(person1.fullName);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
