@@ -677,3 +677,41 @@
 
 
 // bind method
+// /* Ye ek function return krta hai jisko run krne pe desired output milegi */
+
+// const myFunc =()=>{
+//     console.log("Hello world");
+// }
+
+// const myfunc2 = myFunc.bind();
+// myfunc2();/*myfunc2 me myFunc function store ho gya, ab myFunc2 ko run krenge to myFunc waala kaam hoga */
+
+
+const user1 = {
+    fName:"harshit",
+    age : 23,
+    about(favMusician,hobby){
+        console.log(`Name is ${this.fName} and age is ${this.age}, favmusician = ${favMusician}, hobby = ${hobby}`);
+    }
+};
+const user2 = {
+    fName:"shubham",
+    age : 20
+};
+
+// user1.about("honey singh","sleeping");
+// const details = user1.about;
+// console.log(user1.about);/*both details and user1.about have same function */
+// console.log(details);
+// details("honey singh","sleeping");/*yaha fName and age ki values undefined aayengi kyunki hmne function ko assign to kia but user1 ke sath bind nhi kia, Although about and details have same function content but they will not produce same output */
+
+/*name or age ki output undefined na aaye iske liye hme function ko user1 ke sath bind krna hoga */
+const details2 = user1.about.bind(user2/*ye this ko paas kia hai */);
+details2("honey singh","sleeping");
+
+
+
+
+
+
+
