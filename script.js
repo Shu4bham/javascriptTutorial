@@ -174,7 +174,7 @@
 
 
 // Callback function
-
+/*function ke andr function pass krna */
 // const myfunc2 = function (name) {
 //     console.log("Inside myfunc2");
 //     console.log(`Your name is ${name}`);
@@ -743,16 +743,44 @@
 
 
 
-/*short way to create methods in object */
+// /*short way to create methods in object */
 
-const user1 = {
-    fName:"harshit",
-    age : 23,
-    /*insted of about : function(params){
-        
-    } */
-    about(favMusician,hobby){
-        console.log(`Name is ${this.fName} and age is ${this.age}, favmusician = ${favMusician}, hobby = ${hobby}`);
-    }
-};
+// const user1 = {
+//     fName:"harshit",
+//     age : 23,
+//     /*insted of about : function(params){
+
+//     } */
+//     about(favMusician,hobby){
+//         console.log(`Name is ${this.fName} and age is ${this.age}, favmusician = ${favMusician}, hobby = ${hobby}`);
+//     }
+// };
+
+
+
+
+
+// create a function 
+// 1.)that create object
+// 2.) add key value pair 
+// 3.) object ko return krega 
+
+// function createUser(fName, lNmae, age) {
+//     const user = {}
+//     user.fName = fName;
+//     user.lNmae = lNmae;
+//     user.age = age;
+//     user.about = function (){
+//         console.log(`${this.fName}   ${this.lNmae}   ${this.age}`);
+//     }
+//     return user;
+// }
+
+// const user1 = createUser("Shubham","Kamboj",21);
+// console.log(user1);
+// user1.about();
+
+
+
+
 
