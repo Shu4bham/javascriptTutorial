@@ -1100,37 +1100,90 @@ CreateUser.prototype = {
 /*use get keyword for getters
 and
 set keyword for setters */
-class Person{
-    constructor(firstName, lastName, age){
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.age = age;
-    }
-    get fullName(){
-        return `${this.firstName} ${this.lastName}`
-    }
-    /*fullName ko as a property (jaise key hoti hai) use krskte hai    */
-    set fullName(fullName){
-        const [firstName, lastName] = fullName.split(" ");/*space aaya jaha pe uske hisab se alag alag krna */
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
-}
+// class Person{
+//     constructor(firstName, lastName, age){
+//         this.firstName = firstName;
+//         this.lastName = lastName;
+//         this.age = age;
+//     }
+//     get fullName(){
+//         return `${this.firstName} ${this.lastName}`
+//     }
+//     /*fullName ko as a property (jaise key hoti hai) use krskte hai    */
+//     set fullName(fullName){
+//         const [firstName, lastName] = fullName.split(" ");/*space aaya jaha pe uske hisab se alag alag krna */
+//         this.firstName = firstName;
+//         this.lastName = lastName;
+//     }
+// }
 
 
-const person1 = new Person("harshit", "sharma", 5);
-// console.log(person1.fullName());
-console.log(person1.fullName);/*isme fullname ek function hai but usko as a key use kr rahe hai */
-person1.fullName = "mohit vashistha";/*this is setter */
-// console.log(person1);
-console.log(person1.fullName);
-
-
-
+// const person1 = new Person("harshit", "sharma", 5);
+// // console.log(person1.fullName());
+// console.log(person1.fullName);/*isme fullname ek function hai but usko as a key use kr rahe hai */
+// person1.fullName = "mohit vashistha";/*this is setter */
+// // console.log(person1);
+// console.log(person1.fullName);
 
 
 
+// class Person {
+//     constructor(fName,lName, age) {
+//         this.fName = fName;
+//         this.age = age;
+//         this.lName = lName;
+//     }
+//     get fullName() {
+//         return `${this.fName} ${this.lName}`;
+//     }
+//     set fullName(fullName) {
+//         const [a,b] = fullName.split(" ");
+//         this.fName = a;
+//         this.lName = b;
+//     }
+// }
+// const user = new Person("Shubham","kamboj",21);
+// console.log(user);
+// console.log(user.fullName);
+// user.fullName = "Himanshu meena"
+// // user.fName = "Himanshu" /*ye to traditional tareeka hai hi name set krne ka */
+// console.log(user.fullName)
 
+
+
+
+
+// static methods and properties
+/*Static keyword ka use krte hai
+inko access krne ke liye class ka object bnane ki jrurat nhi hotii
+sidha class se call kr skte hai 
+ye object name ke sath call krne pe error/undefined dete hai*/
+
+// class Person {
+//     constructor(fName, lName, age) {
+//         this.fName = fName;
+//         this.lName = lName;
+//         this.age = age;
+//     }
+//     static classInfo() {
+//         console.log("Inside person class");
+//     }
+//     static property = "this is static property";
+//     get fullName() {
+//         return `${this.fName} ${this.lName}`;
+//     }
+//     set fullName(name) {
+//         const [f, l] = name.split(" ");
+//         this.fName = f;
+//         this.lName = l;
+//     }
+// }
+// const user = new Person("SHubham","Kamboj",22);
+// console.log(user.fullName);
+// Person.classInfo();
+// // user.classInfo();/*ye error dega kyonki static property ko object ke sath access nhi kr skte */
+// console.log(Person.property);
+// // console.log(user.property);/*ye undefined dega */
 
 
 
