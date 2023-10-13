@@ -945,8 +945,40 @@ isme bas Object.create me createUser.prototype add krdenge kyunki us objects me 
 
 
 
+/*New keyword */
+/*Basically performs 3 Tasks 
+1. Empty object create kr ke dega
+2. Jo object create hua usko return karega
+3. prototype ke sath chain khud bna ke dega i.e jo kam hum Object.create(createUser.prototype) se manually kr rahe the wo apne ap kr dega
+*/
 
+/*Sign convention :- jo function new keyword ka use krte hai Unka first letter capital rakhe */
 
+// function CreateUser(fName, age) {
+//     this.fName = fName;
+//     this.age = age;
+// }
+// CreateUser.prototype.about = function () {
+//     return `${this.fName} is ${this.age} years old`;
+// }
+// CreateUser.prototype.is18 = function () {
+//     return this.age >= 18;
+// }
+
+// const user1 = new CreateUser("harshit", 19);
+// console.log(user1.about());
+// /*const user1 = new CreateUser("harshit",19); yaha is new ne CreateUser.prototype ke sath apne ap chain bna di isliye user1.about() ko access kr payenge */
+
+// for (const key in user1) {
+//     console.log(key);
+//     /*ye saari keys print kr dega including jo prototype me hai wo bhi */
+// }
+// console.log("only keys inside object ✅");
+// for (const key in user1) {
+//     if (user1.hasOwnProperty(key)) {
+//         console.log(key);
+//     }
+// }
 
 
 
