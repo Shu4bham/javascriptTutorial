@@ -785,30 +785,56 @@
 
 
 
-/*jo functions last wale me object ke andar hi define kiye the unko alag se ek object me define krna */
-/*store methods in different object to reduce redundancy of code */
-const userMethods = {
-    about(){
-        return `${this.firstName} is ${this.age} years old.`;
-    },
-    is18 : function(){
-        return this.age >= 18;
-    }
-}
-function createUser(firstName, lastName, email, age, address){
-    const user = {};
-    user.firstName = firstName;
-    user.lastName = lastName;
-    user.email = email;
-    user.age = age;
-    user.address = address;
-    user.about = userMethods.about;
-    user.is18 = userMethods.is18;
-    return user;
-}
+// /*jo functions last wale me object ke andar hi define kiye the unko alag se ek object me define krna */
+// /*store methods in different object to reduce redundancy of code */
+// const userMethods = {
+//     about(){
+//         return `${this.firstName} is ${this.age} years old.`;
+//     },
+//     is18 : function(){
+//         return this.age >= 18;
+//     }
+// }
+// function createUser(firstName, lastName, email, age, address){
+//     const user = {};
+//     user.firstName = firstName;
+//     user.lastName = lastName;
+//     user.email = email;
+//     user.age = age;
+//     user.address = address;
+//     user.about = userMethods.about;
+//     user.is18 = userMethods.is18;
+//     return user;
+// }
 
-const user1 = createUser('harshit', 'vashsith', 'harshit@gmail.com', 9, "my address");
-const user2 = createUser('harsh', 'vashsith', 'harshit@gmail.com', 19, "my address");
-const user3 = createUser('mohit', 'vashsitha', 'harshit@gmail.com', 17, "my address");
-console.log(user1.about());
-console.log(user3.about());
+// const user1 = createUser('harshit', 'vashsith', 'harshit@gmail.com', 9, "my address");
+// const user2 = createUser('harsh', 'vashsith', 'harshit@gmail.com', 19, "my address");
+// const user3 = createUser('mohit', 'vashsitha', 'harshit@gmail.com', 17, "my address");
+// console.log(user1.about());
+// console.log(user3.about());
+
+
+
+
+
+
+
+
+/*Object.create method */
+
+/*it is much like inheritence, iski help se ek nya object bnate hai or ek already existing object ko pass krte hai arguments me,
+jo nya object bnta hai wo empty hota hai but uske paas paased object ki sari properties hoti hai i.e unko access ke skta hai */
+
+// const obj1 = {
+//     key1: "value1",
+//     key2: "value2"
+// }
+// const obj2 = Object.create(obj1/*ise proto bolte hai */);
+// /*obj2 ka __proto__ obj1 ko set kr dia*/
+
+// console.log(obj2);  /*will show empty objects */
+// console.log(obj2.key1);/*  "value1" as output although obj2 ke pass key1 nhi hai phir bhi ye obj1 ki keys ko access kr skta hai */
+// obj2.key3 = "value3";
+// console.log(obj2);
+// console.log(obj2.__proto__);
+
