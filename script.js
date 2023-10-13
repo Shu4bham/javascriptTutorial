@@ -1014,4 +1014,53 @@ CreateUser.prototype = {
 
 
 
+// Inheritance in Javascript
+// class Animal{
+//     constructor(name,age){
+//         this.name = name;
+//         this.age = age;
+//     }
+//     eat(){
+//         return `${this.name} is eating!`;
+//     }
+//     isCute(){
+//         return true;
+//     }
+// }
+// class Dog extends Animal{
 
+// }
+// const tommy = new Dog("tommy",4);
+// console.log(tommy.eat())
+
+
+// super keyword
+// class Animal{
+//     constructor(name,age){
+//         this.name = name;
+//         this.age = age;
+//     }
+//     eat(){
+//         return `${this.name} is eating!`;
+//     }
+//     isCute(){
+//         return true;
+//     }
+// }
+// class Dog extends Animal{
+//     constructor(name,age,speed){
+//         super(name,age);
+//         this.speed = speed;
+//     }
+//     run(){
+//         return `${this.name} is running at ${this.speed}`;
+//     }
+// }
+// const tommy = new Dog("tommy",4,32);
+// console.log(tommy.eat())
+// console.log(tommy.run());
+
+
+
+
+//
