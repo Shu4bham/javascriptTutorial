@@ -965,6 +965,17 @@ isme bas Object.create me createUser.prototype add krdenge kyunki us objects me 
 //     return this.age >= 18;
 // }
 
+/*as prototype ek objectc hai to hum sare functions ase bhi define kr skte hai
+CreateUser.prototype = {
+    about: function () {
+        return `${this.fName} is ${this.age} years old`;
+    },
+    is18: function () {
+        return this.age >= 18;
+    }
+}
+*/
+
 // const user1 = new CreateUser("harshit", 19);
 // console.log(user1.about());
 // /*const user1 = new CreateUser("harshit",19); yaha is new ne CreateUser.prototype ke sath apne ap chain bna di isliye user1.about() ko access kr payenge */
@@ -981,6 +992,25 @@ isme bas Object.create me createUser.prototype add krdenge kyunki us objects me 
 // }
 
 
+
+
+
+// classes in javascript
+
+// class CreateUser {
+//     constructor(fName,age){
+//         this.fName = fName;
+//         this.age = age;
+//     }
+//     about(){
+//         return `${this.fName} is ${this.age} years old`;
+//     }
+//     is18(){
+//         return this.age>=18;
+//     }
+// }
+// const user1 = new CreateUser("shubham",19);
+// console.log(user1.about());
 
 
 
