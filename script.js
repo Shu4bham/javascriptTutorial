@@ -717,17 +717,17 @@
 // arrow function and this
 /*arrow function ka this nhi hota iska this ek level up hota hai, arrow function ke this ko hum change nhi kr skte */
 
-const about = (favMusician,hobby)=>{
-    console.log(`Name is ${this.fName} and age is ${this.age}, favmusician = ${favMusician}, hobby = ${hobby}`);
-}
+// const about = (favMusician,hobby)=>{
+//     console.log(`Name is ${this.fName} and age is ${this.age}, favmusician = ${favMusician}, hobby = ${hobby}`);
+// }
 
-const user1 = {
-    fName:"harshit",
-    age : 23,
-    about: (favMusician,hobby)=>{
-        console.log(`Name is ${this.fName} and age is ${this.age}, favmusician = ${favMusician}, hobby = ${hobby}`);
-    }
-};
+// const user1 = {
+//     fName:"harshit",
+//     age : 23,
+//     about: (favMusician,hobby)=>{
+//         console.log(`Name is ${this.fName} and age is ${this.age}, favmusician = ${favMusician}, hobby = ${hobby}`);
+//     }
+// };
 // user1.about("honey singh","sleeping");/*although hmne user1 ke sath this ko call kia hai but ye name or age undefined dega */
 // user1.about.call(user1,"honey singh","sleeping")/*we cannot change this of arrow function */
 
@@ -736,4 +736,23 @@ const user1 = {
 
 
 
+
+
+
+
+
+
+
+/*short way to create methods in object */
+
+const user1 = {
+    fName:"harshit",
+    age : 23,
+    /*insted of about : function(params){
+        
+    } */
+    about(favMusician,hobby){
+        console.log(`Name is ${this.fName} and age is ${this.age}, favmusician = ${favMusician}, hobby = ${hobby}`);
+    }
+};
 
