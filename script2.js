@@ -1,0 +1,1 @@
+// clousres in js
