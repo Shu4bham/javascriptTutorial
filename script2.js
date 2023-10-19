@@ -33,6 +33,61 @@ printName();
 
 
 
+
+
+function hello(x){
+    const a  = "varA";
+    const b = "varB";
+    return function(){
+        console.log(a,b,x);
+    }
+}
+
+const ans = hello("arg");
+ans();
+
+
+
+
+
+
+
+
+
+// function myFunction(power){
+//     return function(number){
+//         return number ** power
+//     }
+// }
+// const square = myFunction(2);
+// const ans = square(3);
+// console.log(ans);
+
+
+// const cube = myFunction(3);
+// const ans2 = cube(3);
+// console.log(ans2);
+
+
+function myFunction(power){
+    return function(number){
+        return number ** power
+    }
+}
+const square = myFunction(2);
+const ans1 = square(3);
+console.log(ans1);
+
+
+const cube = myFunction(3);
+const ans2 = cube(3);
+console.log(ans2);
+
+
+
+
+
+
 // function ek baar call
 // use of clousure
 function func(){
