@@ -2,7 +2,7 @@
 
 let foo = "foo";
 console.log(foo);
-function getFullName(firstName, lastName){
+function getFullName(firstName, lastName) {
     console.log(arguments);
     let myVar = "var inside func";
     console.log(myVar);
@@ -20,14 +20,14 @@ console.log(personName);
 
 const lastName = "Vashistha";
 
-const printName = function(){
+const printName = function () {
     const firstName = "harshit";
-    function myFunction(){
+    function myFunction() {
         console.log(firstName);
         console.log(lastName);
     }
     myFunction()
-    
+
 }
 printName();
 
@@ -35,11 +35,11 @@ printName();
 
 
 
-function hello(x){
-    const a  = "varA";
+function hello(x) {
+    const a = "varA";
     const b = "varB";
-    return function(){
-        console.log(a,b,x);
+    return function () {
+        console.log(a, b, x);
     }
 }
 
@@ -69,8 +69,8 @@ ans();
 // console.log(ans2);
 
 
-function myFunction(power){
-    return function(number){
+function myFunction(power) {
+    return function (number) {
         return number ** power
     }
 }
@@ -90,13 +90,13 @@ console.log(ans2);
 
 // function ek baar call
 // use of clousure
-function func(){
+function func() {
     let counter = 0;
-    return function(){
-        if(counter < 1){
+    return function () {
+        if (counter < 1) {
             console.log("Hi You Called me");
             counter++;
-        }else{
+        } else {
             console.log("Mai already ek bar call ho chuka hoon!");
         }
     }
